@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+<!-- Overriding block title from the base.html -->
+{% block title %}
+    First Page Title
+{% endblock %}
+
+<!--
+Overriding the content
+-->
+{% block content %}
+<h1>
+    {{current_time}}
+</h1>
+{% endblock %}

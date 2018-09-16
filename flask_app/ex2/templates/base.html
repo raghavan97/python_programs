@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+
+<!-- 
+This is the common title for all the pages using base.html.
+This is usually overridden in the respective pages
+-->
+{% block title %}
+    Common default Title
+{% endblock %}
+
+<!--
+Base head.
+Should be overrideen by respective , if needed.
+-->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+<!--
+Base Content
+-->
+{% block content %}
+    <h1>Hello</h1>
+{% endblock %}
+
+<!--
+Scripts section
+-->
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
