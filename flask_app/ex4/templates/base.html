@@ -1,0 +1,54 @@
+{% extends "bootstrap/base.html" %}
+
+<!-- 
+This is the common title for all the pages using base.html.
+This is usually overridden in the respective pages
+-->
+{% block title %}
+    Common default Title
+{% endblock %}
+
+<!--
+Base head.
+Should be overrideen by respective , if needed.
+-->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block navbar %}
+    <div class="navbar  navbar-inverse" role="navigation">
+        <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/maths">Maths</a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+
+{% endblock %}
+<!--
+Base Content. Each page needs to override "page_content"
+-->
+{% block content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {{ message }}
+            </div>
+        {% endfor %}
+        {% block page_content %}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+<!--
+Scripts section
+-->
+{% block scripts %}
+    {{ super() }}
+{% endblock %}

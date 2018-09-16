@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+<!-- Overriding block title from the base.html -->
+{% block title %}
+    Physics
+{% endblock %}
+
+<!--
+Overriding the content
+-->
+{% block page_content %}
+<h1>
+    Physics page 
+</h1>
+Current time : {{current_time}}
+{% endblock %}
