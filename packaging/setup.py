@@ -45,7 +45,7 @@ def setup_packages():
         },
         package_data = {
             'minty': [
-                'mstplib/libmstp_agent.so'
+                'mstplib/libmyextn.so'
             ]
         },
         packages=['minty', 'minty.mstplib', 'minty.cool'],
