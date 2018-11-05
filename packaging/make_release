@@ -1,0 +1,6 @@
+docker run --user $(id -u):$(id -g) -it --entrypoint /src/build_whl.sh -v$PWD:/src quay.io/pypa/manylinux1_x86_64 
+cd dist
+auditwheel repair minty-*-cp27-cp27mu-linux_x86_64.whl
+auditwheel repair minty-*-cp27-cp27m-linux_x86_64.whl
+
+ls -l wheelhouse minty-*.tar.gz
